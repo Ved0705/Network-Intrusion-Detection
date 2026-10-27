@@ -1,0 +1,4 @@
+pandasai==3.0.0
+pandasai-litellm==0.0.1
+duckdb>=1.1
+streamlit>=1.40

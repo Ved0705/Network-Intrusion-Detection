@@ -1,0 +1,6 @@
+{
+  "DoS": ["apache2", "back", "land", "mailbomb", "neptune", "pod", "processtable", "smurf", "teardrop", "udpstorm", "worm"],
+  "Probe": ["ipsweep", "mscan", "nmap", "portsweep", "saint", "satan"],
+  "R2L": ["ftp_write", "guess_passwd", "imap", "multihop", "named", "phf", "sendmail", "snmpgetattack", "snmpguess", "spy", "warezclient", "warezmaster", "xlock", "xsnoop"],
+  "U2R": ["buffer_overflow", "httptunnel", "loadmodule", "perl", "ps", "rootkit", "sqlattack", "xterm"]
+}

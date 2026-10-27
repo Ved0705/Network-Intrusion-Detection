@@ -1,0 +1,23 @@
+// Measures for the main table "cleaned_dataset" (imported from exports/cleaned_dataset.csv).
+// Modeling > New measure, paste one definition at a time.
+
+Total Connections =
+COUNTROWS ( cleaned_dataset )
+
+Normal Connections =
+CALCULATE ( COUNTROWS ( cleaned_dataset ), cleaned_dataset[traffic_type] = "Normal" )
+
+Attack Connections =
+CALCULATE ( COUNTROWS ( cleaned_dataset ), cleaned_dataset[traffic_type] = "Attack" )
+
+Attack Percentage =
+DIVIDE ( [Attack Connections], [Total Connections], 0 )
+
+Distinct Attack Labels =
+CALCULATE ( DISTINCTCOUNT ( cleaned_dataset[label] ), cleaned_dataset[traffic_type] = "Attack" )
+
+Average Duration =
+AVERAGE ( cleaned_dataset[duration] )
+
+Median Source Bytes =
+MEDIAN ( cleaned_dataset[src_bytes] )
